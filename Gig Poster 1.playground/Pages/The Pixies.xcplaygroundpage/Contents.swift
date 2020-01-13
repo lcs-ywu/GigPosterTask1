@@ -30,6 +30,39 @@ let limeGreen = Color(hue: 122, saturation: 77, brightness: 75, alpha: 100)
 
 // Begin your solution here...
 
+let black = Color(hue:0, saturation:0, brightness:0, alpha:100)
+canvas.fillColor = black
+canvas.drawRectangle(at: Point(x:0, y:0), width:400, height:600)
+
+canvas.fillColor = limeGreen
+canvas.drawRectangle(at: Point(x:0, y:400), width:400, height:200)
+
+canvas.drawShapesWithBorders = false
+canvas.drawShapesWithFill = true
+canvas.fillColor = limeGreen
+for k in stride(from: 0, through: 400, by: 40){
+    for l in stride(from: 0, through: 400, by: 40){
+        canvas.drawEllipse(at: Point(x: k, y: l), width: 35, height: 35, borderWidth: 100)
+    }
+}
+canvas.drawShapesWithBorders = false
+canvas.drawShapesWithFill = true
+canvas.fillColor = offWhite
+for e in stride(from: 360, through: 40, by: -40){
+    for f in 0...8 {
+        canvas.drawEllipse(at: Point(x: e, y: 40+40*f), width: 35, height: 35, borderWidth: 100)
+    }
+}
+canvas.drawText(message: "pixies", at: Point(x:10, y:410), size: 70)
+
+canvas.lineColor = offWhite
+for m in 1...7 {
+    canvas.drawLine(from: Point(x:m*50, y:0), to: Point(x:m*50, y: 600))
+}
+
+for n in 1...11 {
+    canvas.drawLine(from: Point(x:0,y:n*50), to: Point(x:400,y:n*50))
+}
 
 /*:
  ## Use Source Control
