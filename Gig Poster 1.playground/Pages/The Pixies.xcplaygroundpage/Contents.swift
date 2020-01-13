@@ -25,8 +25,8 @@ import PlaygroundSupport
 let canvas = Canvas(width: 400, height: 600)
 
 // COLORS
-let offWhite = Color(hue: 81, saturation: 5, brightness: 88, alpha: 100)
-let limeGreen = Color(hue: 106, saturation: 64, brightness: 73, alpha: 100)
+let offWhite = Color(hue: 92, saturation: 6, brightness: 89, alpha: 100)
+let limeGreen = Color(hue: 122, saturation: 77, brightness: 75, alpha: 100)
 
 // Begin your solution here...
 
