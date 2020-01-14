@@ -48,12 +48,24 @@ for k in stride(from: 0, through: 400, by: 40){
 canvas.drawShapesWithBorders = false
 canvas.drawShapesWithFill = true
 canvas.fillColor = offWhite
+var n = 1
 for e in stride(from: 360, through: 40, by: -40){
-    for f in 0...8 {
-        canvas.drawEllipse(at: Point(x: e, y: 40+40*f), width: 35, height: 35, borderWidth: 100)
+    for f in 1...n {
+        canvas.drawEllipse(at: Point(x: 40*f, y: e), width: 35, height: 35, borderWidth: 100)
     }
+    n+=1
 }
 canvas.drawText(message: "pixies", at: Point(x:10, y:410), size: 70)
+canvas.drawText(message: "saturday", at: Point(x:15, y:550), size: 10)
+canvas.drawText(message: "december 13 1986", at: Point(x:15, y:535), size: 10)
+canvas.drawText(message: "9 pm over 21", at: Point(x:15, y:520), size: 10)
+canvas.drawText(message: "at the rat", at: Point(x:280, y:550), size: 10)
+canvas.drawText(message: "528 commonwealth", at: Point(x:280, y:535), size: 10)
+canvas.drawText(message: "boston, mass.", at: Point(x:280, y:520), size: 10)
+canvas.textColor = offWhite
+canvas.drawText(message: "with", at: Point(x:280, y:455), size: 15)
+canvas.drawText(message: "throwing muses", at: Point(x:280, y:440), size: 15)
+canvas.drawText(message: "big dipper", at: Point(x:280, y:425), size: 15)
 
 canvas.lineColor = offWhite
 for m in 1...7 {
